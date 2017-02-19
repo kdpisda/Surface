@@ -79,9 +79,9 @@ class Kernel
 
 	public function getUriSegment($int=0)
 	{
-		if(isset(explode('/', trim($_SERVER['REQUEST_URI'], '/'))[$int]))
+		if(isset(explode('/', trim($_SERVER['PATH_INFO'], '/'))[$int]))
 		{
-			return explode('/', trim($_SERVER['REQUEST_URI'], '/'))[$int];
+			return explode('/', trim($_SERVER['PATH_INFO'], '/'))[$int];
 		}
 		else return null;
 	}
